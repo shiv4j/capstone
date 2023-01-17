@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Created-By: Apache Jackrabbit FileVault - Package Maven Plugin 1.1.6
+Build-Jdk-Spec: 17
+Implementation-Title: capstone - All
+Implementation-Version: 1.0.0-SNAPSHOT
+Content-Package-Type: container
+Content-Package-Id: com.alchemy.capstone:capstone.all:1.0.0-SNAPSHOT
+Content-Package-Description: All content package for capstone
+Content-Package-Roots: /apps/capstone-packages,/apps/capstone-vendor-pac
+ kages
+

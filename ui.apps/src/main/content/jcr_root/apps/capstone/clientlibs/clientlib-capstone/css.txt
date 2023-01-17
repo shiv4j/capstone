@@ -1,0 +1,7 @@
+css/animate.css
+css/bootstrap.css
+css/font-awesome.css
+css/meddia_query.css
+css/owl.carousel.css
+css/owl.theme.default.css
+css/style_1.css

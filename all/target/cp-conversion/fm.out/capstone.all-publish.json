@@ -1,0 +1,12 @@
+{
+  "id":"com.alchemy.capstone:capstone.all:slingosgifeature:publish:1.0.0-SNAPSHOT",
+  "configurations":  {
+    "org.apache.sling.jcr.resource.internal.JcrResourceResolverFactoryImpl":    {
+      "resource.resolver.mapping":[
+        "/content/capstone/</",
+        "/:/"
+      ],
+      ":configurator:content-package-origins":"com.alchemy.capstone:capstone.all:1.0.0-SNAPSHOT|com.alchemy.capstone:capstone.ui.config:1.0.0-SNAPSHOT"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id":"com.alchemy.capstone:capstone.all:slingosgifeature:author:1.0.0-SNAPSHOT",
+  "configurations":  {
+    "com.adobe.granite.cors.impl.CORSPolicyImpl~capstone":    {
+      "alloworigin":[
+        "http://localhost:3000"
+      ],
+      "allowedpaths":[
+        "/(content|conf)/capstone.*"
+      ],
+      "supportedheaders":[
+        "Authorization",
+        "Origin",
+        "Accept",
+        "X-Requested-With",
+        "Content-Type",
+        "Access-Control-Request-Method",
+        "Access-Control-Request-Headers"
+      ],
+      "supportedmethods":[
+        "GET",
+        "HEAD"
+      ],
+      "alloworiginregexp":[
+      ],
+      ":configurator:content-package-origins":"com.alchemy.capstone:capstone.all:1.0.0-SNAPSHOT|com.alchemy.capstone:capstone.ui.config:1.0.0-SNAPSHOT"
+    },
+    "com.day.cq.wcm.mobile.core.impl.MobileEmulatorProvider~capstone":    {
+      "mobile.resourceTypes":[
+        "capstone/components/page"
+      ],
+      "README":"Indicate which page resource types should display the mobile emulators.",
+      ":configurator:content-package-origins":"com.alchemy.capstone:capstone.all:1.0.0-SNAPSHOT|com.alchemy.capstone:capstone.ui.config:1.0.0-SNAPSHOT"
+    }
+  }
+}

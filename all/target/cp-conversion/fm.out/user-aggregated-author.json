@@ -1,0 +1,142 @@
+{
+  "id":"com.alchemy.capstone:capstone.all:slingosgifeature:user-aggregated-author:1.0.0-SNAPSHOT",
+  "bundles":[
+    {
+      "id":"com.alchemy.capstone:capstone.core:1.0.0-SNAPSHOT",
+      "feature-origins":"com.alchemy.capstone:capstone.all:slingosgifeature:1.0.0-SNAPSHOT",
+      "Bundle-SymbolicName":"capstone.core",
+      "Bundle-Version":"1.0.0.SNAPSHOT",
+      "start-order":"20",
+      "content-package-origins":"com.alchemy.capstone:capstone.all:1.0.0-SNAPSHOT"
+    }
+  ],
+  "configurations":  {
+    "com.adobe.granite.cors.impl.CORSPolicyImpl~capstone":    {
+      ":configurator:content-package-origins":"com.alchemy.capstone:capstone.all:1.0.0-SNAPSHOT|com.alchemy.capstone:capstone.ui.config:1.0.0-SNAPSHOT",
+      "alloworigin":[
+        "http://localhost:3000"
+      ],
+      "allowedpaths":[
+        "/(content|conf)/capstone.*"
+      ],
+      "supportedheaders":[
+        "Authorization",
+        "Origin",
+        "Accept",
+        "X-Requested-With",
+        "Content-Type",
+        "Access-Control-Request-Method",
+        "Access-Control-Request-Headers"
+      ],
+      "supportedmethods":[
+        "GET",
+        "HEAD"
+      ],
+      "alloworiginregexp":[
+      ],
+      ":configurator:feature-origins-supportedmethods":[
+        "com.alchemy.capstone:capstone.all:slingosgifeature:author:1.0.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins-alloworigin":[
+        "com.alchemy.capstone:capstone.all:slingosgifeature:author:1.0.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins-alloworiginregexp":[
+        "com.alchemy.capstone:capstone.all:slingosgifeature:author:1.0.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins-supportedheaders":[
+        "com.alchemy.capstone:capstone.all:slingosgifeature:author:1.0.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins-allowedpaths":[
+        "com.alchemy.capstone:capstone.all:slingosgifeature:author:1.0.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins":[
+        "com.alchemy.capstone:capstone.all:slingosgifeature:author:1.0.0-SNAPSHOT"
+      ]
+    },
+    "com.day.cq.wcm.mobile.core.impl.MobileEmulatorProvider~capstone":    {
+      ":configurator:content-package-origins":"com.alchemy.capstone:capstone.all:1.0.0-SNAPSHOT|com.alchemy.capstone:capstone.ui.config:1.0.0-SNAPSHOT",
+      "mobile.resourceTypes":[
+        "capstone/components/page"
+      ],
+      "README":"Indicate which page resource types should display the mobile emulators.",
+      ":configurator:feature-origins-mobile.resourceTypes":[
+        "com.alchemy.capstone:capstone.all:slingosgifeature:author:1.0.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins-README":[
+        "com.alchemy.capstone:capstone.all:slingosgifeature:author:1.0.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins":[
+        "com.alchemy.capstone:capstone.all:slingosgifeature:author:1.0.0-SNAPSHOT"
+      ]
+    },
+    "org.apache.sling.commons.log.LogManager.factory.config~capstone":    {
+      ":configurator:content-package-origins":"com.alchemy.capstone:capstone.all:1.0.0-SNAPSHOT|com.alchemy.capstone:capstone.ui.config:1.0.0-SNAPSHOT",
+      "org.apache.sling.commons.log.names":[
+        "com.alchemy.capstone"
+      ],
+      "org.apache.sling.commons.log.level":"INFO",
+      "org.apache.sling.commons.log.file":"logs/error.log",
+      "org.apache.sling.commons.log.additiv":"false",
+      ":configurator:feature-origins-org.apache.sling.commons.log.names":[
+        "com.alchemy.capstone:capstone.all:slingosgifeature:1.0.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins-org.apache.sling.commons.log.file":[
+        "com.alchemy.capstone:capstone.all:slingosgifeature:1.0.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins-org.apache.sling.commons.log.level":[
+        "com.alchemy.capstone:capstone.all:slingosgifeature:1.0.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins-org.apache.sling.commons.log.additiv":[
+        "com.alchemy.capstone:capstone.all:slingosgifeature:1.0.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins":[
+        "com.alchemy.capstone:capstone.all:slingosgifeature:1.0.0-SNAPSHOT"
+      ]
+    }
+  },
+  "assembled-features:ARTIFACTS|TRANSIENT":[
+    "com.alchemy.capstone:capstone.all:slingosgifeature:author:1.0.0-SNAPSHOT",
+    "com.alchemy.capstone:capstone.all:slingosgifeature:1.0.0-SNAPSHOT"
+  ],
+  "content-packages:ARTIFACTS|true":[
+    {
+      "id":"com.alchemy.capstone:capstone.ui.apps:zip:cp2fm-converted:1.0.0-SNAPSHOT",
+      "feature-origins":"com.alchemy.capstone:capstone.all:slingosgifeature:1.0.0-SNAPSHOT"
+    },
+    {
+      "id":"com.alchemy.capstone:capstone.ui.config:zip:cp2fm-converted:1.0.0-SNAPSHOT",
+      "feature-origins":"com.alchemy.capstone:capstone.all:slingosgifeature:1.0.0-SNAPSHOT"
+    },
+    {
+      "id":"com.alchemy.capstone:capstone.all:zip:cp2fm-converted:1.0.0-SNAPSHOT",
+      "feature-origins":"com.alchemy.capstone:capstone.all:slingosgifeature:1.0.0-SNAPSHOT"
+    }
+  ],
+  "repoinit:TEXT|true":[
+    "# origin=com.alchemy.capstone:capstone.all:1.0.0-SNAPSHOT|com.alchemy.capstone:capstone.ui.config:1.0.0-SNAPSHOT source=org.apache.sling.jcr.repoinit.RepositoryInitializer~capstone\r",
+    "create path (sling:OrderedFolder) /content/dam/capstone\r",
+    "create path (nt:unstructured) /content/dam/capstone/jcr:content\r",
+    "set properties on /content/dam/capstone/jcr:content",
+    "  set cq:conf{String} to /conf/capstone",
+    "  set jcr:title{String} to \"capstone\"",
+    "end"
+  ],
+  "api-regions:JSON|false":[
+    {
+      "name":"global",
+      "exports":[
+        "com.alchemy.capstone.core.filters",
+        "com.alchemy.capstone.core.listeners",
+        "com.alchemy.capstone.core.models",
+        "com.alchemy.capstone.core.schedulers",
+        "com.alchemy.capstone.core.servlets"
+      ],
+      "feature-origins":[
+        "com.alchemy.capstone:capstone.all:slingosgifeature:1.0.0-SNAPSHOT"
+      ]
+    }
+  ],
+  "artifact-rules:JSON|false":{
+
+  }
+}

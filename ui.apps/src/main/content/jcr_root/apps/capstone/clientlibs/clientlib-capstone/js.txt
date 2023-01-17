@@ -1,0 +1,8 @@
+#base=js
+bootstrap.js
+jquery.js
+jquery.waypoints.min.js
+main.js
+modernizr-3.5.0.min.js
+owl.carousel.min.js
+tether.min.js

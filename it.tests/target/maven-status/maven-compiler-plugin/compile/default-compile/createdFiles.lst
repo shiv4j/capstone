@@ -1,0 +1,4 @@
+com\alchemy\capstone\it\tests\PublishPageValidationIT.class
+com\alchemy\capstone\it\tests\CreatePageIT.class
+com\alchemy\capstone\it\tests\HtmlUnitClient.class
+com\alchemy\capstone\it\tests\GetPageIT.class

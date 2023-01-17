@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Created-By: Apache Jackrabbit FileVault - Package Maven Plugin 1.1.6
+Build-Jdk-Spec: 17
+Implementation-Title: capstone - UI apps
+Implementation-Version: 1.0.0-SNAPSHOT
+Content-Package-Type: application
+Content-Package-Id: com.alchemy.capstone:capstone.ui.apps:1.0.0-SNAPSHOT
+Content-Package-Description: UI apps package for capstone
+Content-Package-Roots: /apps/capstone/clientlibs,/apps/capstone/componen
+ ts,/apps/capstone/i18n
+Import-Package: com.adobe.cq.wcm.core.components.models;version="[12.26.
+ 0,13.0.0)",com.alchemy.capstone.core.models;version="[1.0.0,2.0.0)",org
+ .apache.sling.scripting.sightly;version="[2.0.0,3.0.0)"
+

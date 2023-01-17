@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>capstone - UI content</comment>
+<entry key="allowIndexDefinitions">false</entry>
+<entry key="acHandling">merge</entry>
+<entry key="dependencies-locations">com.alchemy.capstone:capstone.ui.apps:1.0.0-SNAPSHOT=maven:com.alchemy.capstone:capstone.ui.apps:1.0.0-SNAPSHOT:zip</entry>
+<entry key="created">2023-01-16T08:34:12.086Z</entry>
+<entry key="groupId">com.alchemy.capstone</entry>
+<entry key="description">UI content package for capstone</entry>
+<entry key="version">1.0.0-SNAPSHOT</entry>
+<entry key="packageType">content</entry>
+<entry key="requiresRoot">false</entry>
+<entry key="dependencies">com.alchemy.capstone:capstone.ui.apps:1.0.0-SNAPSHOT</entry>
+<entry key="cloudManagerTarget">none</entry>
+<entry key="name">capstone.ui.content</entry>
+<entry key="artifactId">capstone.ui.content</entry>
+<entry key="group">com.alchemy.capstone</entry>
+</properties>
