@@ -12,24 +12,24 @@ import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 
 import com.alchemy.capstone.core.services.TrendingArticalService;
 
-@Model(adaptables = Resource.class,defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
+@Model(adaptables = {Resource.class},defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 public class TrendingModel 
 {
 	@OSGiService
 	TrendingArticalService trendingArticalService;
 	@ValueMapValue
 	private String title;
-	List<BannerArticle> bannerLsit;
+	List<BannerArticle> bannerList;
 	@PostConstruct
 	public void init()
 	{
-		bannerLsit=trendingArticalService.getTrendingArticles();
+		bannerList=trendingArticalService.getTrendingArticles();
 	}
 	public String getTitle() {
 		return title;
 	}
 	public List<BannerArticle> getBannerLsit() {
-		return bannerLsit;
+		return bannerList;
 	}
 	
 }

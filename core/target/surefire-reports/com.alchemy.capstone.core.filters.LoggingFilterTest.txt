@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.alchemy.capstone.core.filters.LoggingFilterTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.94 s - in com.alchemy.capstone.core.filters.LoggingFilterTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.984 s - in com.alchemy.capstone.core.filters.LoggingFilterTest
