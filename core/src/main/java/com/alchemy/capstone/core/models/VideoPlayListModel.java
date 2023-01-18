@@ -17,19 +17,15 @@ import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
-import org.slf4j.*;
 @Model(adaptables = Resource.class,defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
-public class VideoPlayListModel 
-{
-	 private static final Logger Log=LoggerFactory.getLogger(VideoPlayListModel.class);
+public class VideoPlayListModel {
+	
 	@ValueMapValue
 	private String[] youTubeLinks;
 	private List<YouTubeVideoResponse> videoList;
 	@PostConstruct
 	public void init()
 	{
-		
-		Log.info("inside video");
 		if(youTubeLinks!=null)
 		{	
 			videoList=new ArrayList<>();
@@ -37,14 +33,12 @@ public class VideoPlayListModel
 			{
 				for(String youtubeLink:youTubeLinks)
 				{
-					Log.info("youtubeLink="+youtubeLink);
 					HttpGet request=new HttpGet("https://www.youtube.com/oembed?url="+youtubeLink);
 						try(CloseableHttpResponse response=httpClient.execute(request))
 						{
 							HttpEntity entity=response.getEntity();
 							if(entity!=null)
 							{
-								Log.info("enitity="+entity);
 								String result=EntityUtils.toString(entity);
 								try(JsonReader jsonReader=Json.createReader(new StringReader(result)))
 								{
@@ -54,8 +48,6 @@ public class VideoPlayListModel
 										youTubeVideoResponseDto.setTitle(youtubeResponse.getString("title"));
 										youTubeVideoResponseDto.setThumbnailUrl(youtubeResponse.getString("thumbnail_url"));
 										videoList.add(youTubeVideoResponseDto);
-										Log.info("videolsit="+videoList);
-										
 								}
 		
 							}
@@ -70,10 +62,9 @@ public class VideoPlayListModel
 			
 		}
 	}
-	
-	public List<YouTubeVideoResponse> getVideoList() {
+	public List<YouTubeVideoResponse> getVideoList()
+	 {
 		return videoList;
 	}
-	
 	
 }

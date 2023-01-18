@@ -15,7 +15,6 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                         fieldLabel="Banner Text"
-                        maxlength="{Long}100"
                         name="./trendingText"
                         required="{Boolean}true"/>
                 </items>

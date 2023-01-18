@@ -30,20 +30,24 @@ public class TrendingArticleServiceImpl implements TrendingArticalService{
 		{
 			String query="SELECT * FROM [cq:Page] AS s WHERE ISDESCENDANTNODE([/content/capstone/us/en/articles]) order by s.[jcr:content/jcr:created] desc";
 			Iterator<Resource> result=resolver.findResources(query, Query.JCR_SQL2);
-			while(result.hasNext()) {
+			while(result.hasNext())
+			{
 			Resource resource =  result.next();
-			Resource articleResource=resolver.getResource(resource+"/jcr:content/root/container/baner_article");
+			Resource articleResource=resolver.getResource(resource.getPath()+"/jcr:content/root/container/baner_article");
 			if(articleResource!=null)
 			{
 				BannerArticle bannerArtical= articleResource.adaptTo(BannerArticle.class);
-				bannerArtical.setPagePath(resource.getPath());
-				if(bannerList.size()<5)
+				if(bannerArtical!=null)
 				{
-					bannerList.add(bannerArtical);
-					
+					bannerArtical.setPagePath(resource.getPath());
+					if(bannerList.size()<5)
+					{
+						bannerList.add(bannerArtical);
+						
+					}
 				}
-		}
 				
+			}				
 			}
 		}
 		return bannerList;
@@ -56,7 +60,7 @@ public class TrendingArticleServiceImpl implements TrendingArticalService{
 		try {
 			Map<String, Object> props=new HashMap<>();
 			props.put(ResourceResolverFactory.SUBSERVICE,"ncsubservice");
-			resolver=factory.getResourceResolver(props);
+			resolver=factory.getServiceResourceResolver(props);
 		} catch (LoginException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
