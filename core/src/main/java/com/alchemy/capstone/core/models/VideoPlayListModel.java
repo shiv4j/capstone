@@ -24,17 +24,15 @@ public class VideoPlayListModel
 	 private static final Logger Log=LoggerFactory.getLogger(VideoPlayListModel.class);
 	@ValueMapValue
 	private String[] youTubeLinks;
-	List<YouTubeVideoResponse> videoList=new ArrayList<>();
-	String name;
+	private List<YouTubeVideoResponse> videoList;
 	@PostConstruct
 	public void init()
 	{
 		
 		Log.info("inside video");
-		name="capstone";
 		if(youTubeLinks!=null)
 		{	
-			
+			videoList=new ArrayList<>();
 			try(CloseableHttpClient httpClient=HttpClients.createDefault())
 			{
 				for(String youtubeLink:youTubeLinks)
@@ -72,9 +70,10 @@ public class VideoPlayListModel
 			
 		}
 	}
-	public List<YouTubeVideoResponse> getVideoList()
-	{
+	
+	public List<YouTubeVideoResponse> getVideoList() {
 		return videoList;
 	}
+	
 	
 }

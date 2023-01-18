@@ -5,7 +5,7 @@
 <entry key="allowIndexDefinitions">false</entry>
 <entry key="acHandling">merge</entry>
 <entry key="dependencies-locations">com.alchemy.capstone:capstone.ui.apps:1.0.0-SNAPSHOT=maven:com.alchemy.capstone:capstone.ui.apps:1.0.0-SNAPSHOT:zip</entry>
-<entry key="created">2023-01-16T08:34:12.086Z</entry>
+<entry key="created">2023-01-17T15:15:14.747Z</entry>
 <entry key="groupId">com.alchemy.capstone</entry>
 <entry key="description">UI content package for capstone</entry>
 <entry key="version">1.0.0-SNAPSHOT</entry>

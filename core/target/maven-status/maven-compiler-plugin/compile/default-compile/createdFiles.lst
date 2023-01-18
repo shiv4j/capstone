@@ -11,7 +11,10 @@ com\alchemy\capstone\core\schedulers\package-info.class
 com\alchemy\capstone\core\models\BannerArticle.class
 com\alchemy\capstone\core\listeners\SimpleResourceListener.class
 com\alchemy\capstone\core\models\FooterModel.class
+com\alchemy\capstone\core\services\TrendingArticalService.class
 com\alchemy\capstone\core\listeners\package-info.class
+com\alchemy\capstone\core\models\TrendingModel.class
+com\alchemy\capstone\core\services\impl\TrendingArticleServiceImpl.class
 com\alchemy\capstone\core\servlets\package-info.class
 com\alchemy\capstone\core\models\HeaderPrimaryModel.class
 com\alchemy\capstone\core\filters\package-info.class

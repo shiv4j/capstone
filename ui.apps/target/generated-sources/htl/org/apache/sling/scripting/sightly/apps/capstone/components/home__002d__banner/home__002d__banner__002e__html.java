@@ -36,7 +36,7 @@ public final class home__002d__banner__002e__html extends RenderUnit {
 
 Object _global_homebanner = null;
 Collection var_collectionvar0_list_coerced$ = null;
-Collection var_collectionvar17_list_coerced$ = null;
+Collection var_collectionvar18_list_coerced$ = null;
 _global_homebanner = renderContext.call("use", com.alchemy.capstone.core.models.HomeBannerModel.class.getName(), obj());
 out.write("\n<div class=\"container-fluid paddding mb-5\">\n    <div class=\"row mx-0\">\n        ");
 {
@@ -89,13 +89,20 @@ out.write("\n<div class=\"container-fluid paddding mb-5\">\n    <div class=\"row
                                                     }
                                                     out.write(" alt=\"img\"/>\n                <div class=\"fh5co_suceefh5co_height_position_absolute\"></div>\n                <div class=\"fh5co_suceefh5co_height_position_absolute_font\">\n                    <div class=\"\"><a href=\"#\" class=\"color_fff\"> <i class=\"fa fa-clock-o\"></i>");
                                                     {
-                                                        String var_15 = (("&nbsp;&nbsp;" + renderContext.getObjectModel().toString(renderContext.call("xss", renderContext.getObjectModel().resolveProperty(banneritem, "createdDatestr"), "text"))) + "\n                    ");
+                                                        String var_15 = (("&nbsp;&nbsp;" + renderContext.getObjectModel().toString(renderContext.call("xss", renderContext.getObjectModel().resolveProperty(banneritem, "createdDateStr"), "text"))) + "\n                    ");
                                                         out.write(renderContext.getObjectModel().toString(var_15));
                                                     }
-                                                    out.write("</a></div>\n                    <div class=\"\"><a href=\"single.html\" class=\"fh5co_good_font\">");
+                                                    out.write("</a></div>\n                    <div class=\"\"><a");
                                                     {
-                                                        String var_16 = ((" " + renderContext.getObjectModel().toString(renderContext.call("xss", renderContext.getObjectModel().resolveProperty(banneritem, "bannerText"), "text"))) + " ");
-                                                        out.write(renderContext.getObjectModel().toString(var_16));
+                                                        String var_attrcontent16 = (renderContext.getObjectModel().toString(renderContext.call("xss", renderContext.getObjectModel().resolveProperty(banneritem, "pagePath"), "uri")) + ".html");
+                                                        out.write(" href=\"");
+                                                        out.write(renderContext.getObjectModel().toString(var_attrcontent16));
+                                                        out.write("\"");
+                                                    }
+                                                    out.write(" class=\"fh5co_good_font\">");
+                                                    {
+                                                        String var_17 = ((" " + renderContext.getObjectModel().toString(renderContext.call("xss", renderContext.getObjectModel().resolveProperty(banneritem, "bannerText"), "text"))) + " ");
+                                                        out.write(renderContext.getObjectModel().toString(var_17));
                                                     }
                                                     out.write("</a></div>\n                </div>\n            </div>");
                                                 }
@@ -117,41 +124,69 @@ out.write("\n<div class=\"container-fluid paddding mb-5\">\n    <div class=\"row
 }
 out.write("\n        <div class=\"col-md-6\">\n            ");
 {
-    Object var_collectionvar17 = renderContext.getObjectModel().resolveProperty(_global_homebanner, "bannerList");
+    Object var_collectionvar18 = renderContext.getObjectModel().resolveProperty(_global_homebanner, "bannerList");
     {
-        long var_size18 = ((var_collectionvar17_list_coerced$ == null ? (var_collectionvar17_list_coerced$ = renderContext.getObjectModel().toCollection(var_collectionvar17)) : var_collectionvar17_list_coerced$).size());
+        long var_size19 = ((var_collectionvar18_list_coerced$ == null ? (var_collectionvar18_list_coerced$ = renderContext.getObjectModel().toCollection(var_collectionvar18)) : var_collectionvar18_list_coerced$).size());
         {
-            boolean var_notempty19 = (var_size18 > 0);
-            if (var_notempty19) {
+            boolean var_notempty20 = (var_size19 > 0);
+            if (var_notempty20) {
                 {
-                    long var_end22 = var_size18;
+                    long var_end23 = var_size19;
                     {
-                        boolean var_validstartstepend23 = (((0 < var_size18) && true) && (var_end22 > 0));
-                        if (var_validstartstepend23) {
+                        boolean var_validstartstepend24 = (((0 < var_size19) && true) && (var_end23 > 0));
+                        if (var_validstartstepend24) {
                             out.write("<div class=\"row\">");
-                            if (var_collectionvar17_list_coerced$ == null) {
-                                var_collectionvar17_list_coerced$ = renderContext.getObjectModel().toCollection(var_collectionvar17);
+                            if (var_collectionvar18_list_coerced$ == null) {
+                                var_collectionvar18_list_coerced$ = renderContext.getObjectModel().toCollection(var_collectionvar18);
                             }
-                            long var_index24 = 0;
-                            for (Object banneritem : var_collectionvar17_list_coerced$) {
+                            long var_index25 = 0;
+                            for (Object banneritem : var_collectionvar18_list_coerced$) {
                                 {
-                                    boolean banneritemlist_field$_first = (var_index24 == 0);
+                                    boolean banneritemlist_field$_first = (var_index25 == 0);
                                     {
-                                        boolean var_traversal26 = (((var_index24 >= 0) && (var_index24 <= var_end22)) && true);
-                                        if (var_traversal26) {
+                                        boolean var_traversal27 = (((var_index25 >= 0) && (var_index25 <= var_end23)) && true);
+                                        if (var_traversal27) {
                                             out.write("\n                ");
                                             {
-                                                boolean var_testvariable27 = (!banneritemlist_field$_first);
-                                                if (var_testvariable27) {
-                                                    out.write("<div class=\"col-md-6 col-6 paddding animate-box\" data-animate-effect=\"fadeIn\">\n                    <div class=\"fh5co_suceefh5co_height_2\"><img src=\"images/science-578x362.jpg\" alt=\"img\"/>\n                        <div class=\"fh5co_suceefh5co_height_position_absolute\"></div>\n                        <div class=\"fh5co_suceefh5co_height_position_absolute_font_2\">\n                            <div class=\"\"><a href=\"#\" class=\"color_fff\"> <i class=\"fa fa-clock-o\"></i>");
+                                                boolean var_testvariable28 = (!banneritemlist_field$_first);
+                                                if (var_testvariable28) {
+                                                    out.write("<div class=\"col-md-6 col-6 paddding animate-box\" data-animate-effect=\"fadeIn\">\n                    <div class=\"fh5co_suceefh5co_height_2\"><img");
                                                     {
-                                                        String var_28 = (("&nbsp;&nbsp;" + renderContext.getObjectModel().toString(renderContext.call("xss", renderContext.getObjectModel().resolveProperty(banneritem, "createdDatestr"), "text"))) + "\n                              ");
-                                                        out.write(renderContext.getObjectModel().toString(var_28));
+                                                        Object var_attrvalue29 = renderContext.getObjectModel().resolveProperty(banneritem, "bannerImage");
+                                                        {
+                                                            Object var_attrcontent30 = renderContext.call("xss", var_attrvalue29, "uri");
+                                                            {
+                                                                boolean var_shoulddisplayattr32 = (((null != var_attrcontent30) && (!"".equals(var_attrcontent30))) && ((!"".equals(var_attrvalue29)) && (!((Object)false).equals(var_attrvalue29))));
+                                                                if (var_shoulddisplayattr32) {
+                                                                    out.write(" src");
+                                                                    {
+                                                                        boolean var_istrueattr31 = (var_attrvalue29.equals(true));
+                                                                        if (!var_istrueattr31) {
+                                                                            out.write("=\"");
+                                                                            out.write(renderContext.getObjectModel().toString(var_attrcontent30));
+                                                                            out.write("\"");
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
                                                     }
-                                                    out.write("</a></div>\n                            <div class=\"\"><a href=\"single.html\" class=\"fh5co_good_font_2\">");
+                                                    out.write(" alt=\"img\"/>\n                        <div class=\"fh5co_suceefh5co_height_position_absolute\"></div>\n                        <div class=\"fh5co_suceefh5co_height_position_absolute_font_2\">\n                            <div class=\"\"><a href=\"#\" class=\"color_fff\"> <i class=\"fa fa-clock-o\"></i>");
                                                     {
-                                                        String var_29 = (renderContext.getObjectModel().toString(renderContext.call("xss", renderContext.getObjectModel().resolveProperty(banneritem, "bannerText"), "text")) + "  ");
-                                                        out.write(renderContext.getObjectModel().toString(var_29));
+                                                        String var_33 = (("&nbsp;&nbsp;" + renderContext.getObjectModel().toString(renderContext.call("xss", renderContext.getObjectModel().resolveProperty(banneritem, "createdDateStr"), "text"))) + "\n                              ");
+                                                        out.write(renderContext.getObjectModel().toString(var_33));
+                                                    }
+                                                    out.write("</a></div>\n                            <div class=\"\"><a");
+                                                    {
+                                                        String var_attrcontent34 = (renderContext.getObjectModel().toString(renderContext.call("xss", renderContext.getObjectModel().resolveProperty(_global_homebanner, "pagePath"), "uri")) + ".html");
+                                                        out.write(" href=\"");
+                                                        out.write(renderContext.getObjectModel().toString(var_attrcontent34));
+                                                        out.write("\"");
+                                                    }
+                                                    out.write(" class=\"fh5co_good_font_2\">");
+                                                    {
+                                                        String var_35 = (renderContext.getObjectModel().toString(renderContext.call("xss", renderContext.getObjectModel().resolveProperty(banneritem, "bannerText"), "text")) + "  ");
+                                                        out.write(renderContext.getObjectModel().toString(var_35));
                                                     }
                                                     out.write("</a></div>\n                        </div>\n                    </div>\n                </div>");
                                                 }
@@ -160,7 +195,7 @@ out.write("\n        <div class=\"col-md-6\">\n            ");
                                         }
                                     }
                                 }
-                                var_index24++;
+                                var_index25++;
                             }
                             out.write("</div>");
                         }
@@ -169,7 +204,7 @@ out.write("\n        <div class=\"col-md-6\">\n            ");
             }
         }
     }
-    var_collectionvar17_list_coerced$ = null;
+    var_collectionvar18_list_coerced$ = null;
 }
 out.write("\n        </div>\n    </div>\n</div>");
 

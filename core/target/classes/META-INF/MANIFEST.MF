@@ -28,24 +28,30 @@ Import-Package: javax.annotation;version="0.0.0",com.alchemy.capstone.
  on="[2.3,3)",org.apache.sling.models.annotations;version="[1.5,2)",or
  g.apache.sling.models.annotations.injectorspecific;version="[1.1,2)",
  org.slf4j;version="[1.7,2)"
-Provide-Capability: osgi.service;objectClass:List<String>="java.lang.R
- unnable",osgi.service;objectClass:List<String>="javax.servlet.Filter"
- ;uses:="javax.servlet",osgi.service;objectClass:List<String>="javax.s
- ervlet.Servlet";uses:="javax.servlet",osgi.service;objectClass:List<S
- tring>="org.apache.sling.api.resource.observation.ResourceChangeListe
- ner";uses:="org.apache.sling.api.resource.observation"
-Require-Capability: osgi.extender;filter:="(&(osgi.extender=osgi.compo
- nent)(version>=1.5.0)(!(version>=2.0.0)))",osgi.ee;filter:="(&(osgi.e
- e=JavaSE)(version=1.8))"
+Private-Package: com.alchemy.capstone.core.services,com.alchemy.capsto
+ ne.core.services.impl
+Provide-Capability: osgi.service;objectClass:List<String>="com.alchemy
+ .capstone.core.services.TrendingArticalService";uses:="com.alchemy.ca
+ pstone.core.services",osgi.service;objectClass:List<String>="java.lan
+ g.Runnable",osgi.service;objectClass:List<String>="javax.servlet.Filt
+ er";uses:="javax.servlet",osgi.service;objectClass:List<String>="java
+ x.servlet.Servlet";uses:="javax.servlet",osgi.service;objectClass:Lis
+ t<String>="org.apache.sling.api.resource.observation.ResourceChangeLi
+ stener";uses:="org.apache.sling.api.resource.observation"
+Require-Capability: osgi.service;filter:="(objectClass=org.apache.slin
+ g.api.resource.ResourceResolverFactory)";effective:=active,osgi.exten
+ der;filter:="(&(osgi.extender=osgi.component)(version>=1.5.0)(!(versi
+ on>=2.0.0)))",osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
 Service-Component: OSGI-INF/com.alchemy.capstone.core.filters.LoggingF
  ilter.xml,OSGI-INF/com.alchemy.capstone.core.listeners.SimpleResource
  Listener.xml,OSGI-INF/com.alchemy.capstone.core.schedulers.SimpleSche
- duledTask.xml,OSGI-INF/com.alchemy.capstone.core.servlets.SimpleServl
- et.xml
+ duledTask.xml,OSGI-INF/com.alchemy.capstone.core.services.impl.Trendi
+ ngArticleServiceImpl.xml,OSGI-INF/com.alchemy.capstone.core.servlets.
+ SimpleServlet.xml
 Sling-Model-Classes: com.alchemy.capstone.core.models.BannerArticle,co
  m.alchemy.capstone.core.models.FooterModel,com.alchemy.capstone.core.
  models.HeaderPrimaryModel,com.alchemy.capstone.core.models.HeaderSeco
  ndaryModel,com.alchemy.capstone.core.models.HelloWorldModel,com.alche
  my.capstone.core.models.HomeBannerModel,com.alchemy.capstone.core.mod
- els.VideoPlayListModel
+ els.TrendingModel,com.alchemy.capstone.core.models.VideoPlayListModel
 
