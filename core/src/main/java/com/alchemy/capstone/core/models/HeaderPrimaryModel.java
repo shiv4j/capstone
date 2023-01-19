@@ -17,19 +17,22 @@ public class HeaderPrimaryModel {
 	@ValueMapValue
 	private String trendingDesc;
 	public String todayDate;
-	@PostConstruct	
-	public void init()
-	{
-		Date today=new Date();
-		SimpleDateFormat simpleDateFormat=new SimpleDateFormat("EEEE,D MMMMM YYYY");
-		todayDate=simpleDateFormat.format(new Date());
+
+	@PostConstruct
+	public void init() {
+		Date today = new Date();
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("EEEE,D MMMMM YYYY");
+		todayDate = simpleDateFormat.format(new Date());
 	}
+
 	public String getTrendingText() {
 		return trendingText;
 	}
+
 	public String getTrendingDesc() {
 		return trendingDesc;
 	}
+
 	public String getTodayDate() {
 		return todayDate;
 	}

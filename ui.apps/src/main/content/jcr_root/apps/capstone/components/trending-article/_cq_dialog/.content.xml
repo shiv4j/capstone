@@ -11,12 +11,11 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="granite/ui/components/coral/foundation/container">
                 <items jcr:primaryType="nt:unstructured">
-                    <trendingtext
+                    <title
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                        fieldLabel="Banner Text"
-                        name="./trendingText"
-                        required="{Boolean}true"/>
+                        fieldLabel="trending title"
+                        name="./title"/>
                 </items>
             </column>
         </items>

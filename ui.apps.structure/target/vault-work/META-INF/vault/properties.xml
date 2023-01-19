@@ -4,7 +4,7 @@
 <comment>capstone - Repository Structure Package</comment>
 <entry key="cloudManagerTarget">none</entry>
 <entry key="allowIndexDefinitions">false</entry>
-<entry key="created">2023-01-17T15:15:13.918Z</entry>
+<entry key="created">2023-01-19T07:21:18.351Z</entry>
 <entry key="groupId">com.alchemy.capstone</entry>
 <entry key="name">capstone.ui.apps.structure</entry>
 <entry key="description">Empty package that defines the structure of the Adobe Experience Manager repository the Code packages in this project deploy into.

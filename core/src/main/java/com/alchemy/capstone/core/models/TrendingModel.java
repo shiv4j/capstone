@@ -4,32 +4,40 @@ import java.util.List;
 
 import javax.annotation.PostConstruct;
 
+import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.OSGiService;
 import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.alchemy.capstone.core.services.TrendingArticalService;
 
-@Model(adaptables = {Resource.class},defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
-public class TrendingModel 
-{
-	@OSGiService
-	TrendingArticalService trendingArticalService;
+@Model(adaptables = { Resource.class,
+		SlingHttpServletRequest.class }, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
+public class TrendingModel {
+	private static final Logger Log = LoggerFactory.getLogger(TrendingModel.class);
+	List<BannerArticle> bannerList;
 	@ValueMapValue
 	private String title;
-	List<BannerArticle> bannerList;
+
+	@OSGiService
+	TrendingArticalService trendingArticalService;
+
 	@PostConstruct
-	public void init()
-	{
-		bannerList=trendingArticalService.getTrendingArticles();
+	public void init() {
+		Log.info("inside init 1");
+		bannerList = trendingArticalService.getTrendingArticles();
+		Log.info("inside init {}", bannerList.size());
 	}
+
+	public List<BannerArticle> getBannerList() {
+		return bannerList;
+	}
+
 	public String getTitle() {
 		return title;
 	}
-	public List<BannerArticle> getBannerLsit() {
-		return bannerList;
-	}
-	
 }

@@ -4,7 +4,7 @@
 <comment>capstone - UI apps</comment>
 <entry key="cloudManagerTarget">none</entry>
 <entry key="allowIndexDefinitions">false</entry>
-<entry key="created">2023-01-17T15:15:10.680Z</entry>
+<entry key="created">2023-01-19T07:21:16.731Z</entry>
 <entry key="groupId">com.alchemy.capstone</entry>
 <entry key="name">capstone.ui.apps</entry>
 <entry key="description">UI apps package for capstone</entry>
