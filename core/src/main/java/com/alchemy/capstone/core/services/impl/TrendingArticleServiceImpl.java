@@ -19,14 +19,22 @@ import org.slf4j.LoggerFactory;
 
 import com.alchemy.capstone.core.models.BannerArticle;
 import com.alchemy.capstone.core.services.TrendingArticalService;
-
+/**
+ *      @author Shiva Kumar
+ * 
+ *      Service implementation class for TrendingArticlesSerivce Service interface
+ *
+ */
 @Component(service = TrendingArticalService.class, immediate = true)
 public class TrendingArticleServiceImpl implements TrendingArticalService {
 
 	private static final Logger Log = LoggerFactory.getLogger(TrendingArticleServiceImpl.class);
 	@Reference
 	ResourceResolverFactory factory;
-
+	/**
+	 *     To get list of articles which are created recently
+	 *     based on jcr:createdDate of the page
+	 */
 	@Override
 	public List<BannerArticle> getTrendingArticles() {
 		Log.info("inside trending articles 1");
@@ -58,7 +66,9 @@ public class TrendingArticleServiceImpl implements TrendingArticalService {
 		}
 		return bannerList;
 	}
-
+	/**
+	 *     To return resolver for Trending Article Service
+	 */
 	@Override
 	public ResourceResolver getResourceResolver() {
 		// TODO Auto-generated method stub

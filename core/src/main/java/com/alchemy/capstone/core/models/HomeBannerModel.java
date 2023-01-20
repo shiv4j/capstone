@@ -11,7 +11,12 @@ import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.SlingObject;
 import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
-
+/**
+ *      @author Shiva Kumar
+ * 
+ *      Sling Model to fetch Banner Home Component properties
+ *
+ */
 @Model(adaptables = { Resource.class,
 		SlingHttpServletRequest.class }, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 public class HomeBannerModel {
@@ -21,7 +26,10 @@ public class HomeBannerModel {
 	@SlingObject
 	ResourceResolver resolver;
 	List<BannerArticle> bannerList;
-
+	/**
+	 *     Post Construct method to read 5 articles properties
+	 *     to display in Banner Home Component
+	 */
 	@PostConstruct
 	public void init() {
 

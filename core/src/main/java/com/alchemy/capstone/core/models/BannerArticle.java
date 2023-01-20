@@ -1,6 +1,7 @@
 package com.alchemy.capstone.core.models;
 
 import java.text.SimpleDateFormat;
+
 import java.util.Date;
 
 import javax.annotation.PostConstruct;
@@ -10,6 +11,12 @@ import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 
+/**
+ *      @author Shiva Kumar
+ * 
+ *      Sling Model to fetch Banner Home Component properties
+ *
+ */
 @Model(adaptables = Resource.class, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 public class BannerArticle {
 	@ValueMapValue
@@ -21,7 +28,9 @@ public class BannerArticle {
 	private String mainArticleDateStr;
 	private String createdDateStr;
 	private String pagePath;
-
+	 /**
+     *      To get the date in specified date format
+     */
 	@PostConstruct
 	public void init() {
 		SimpleDateFormat formatter = new SimpleDateFormat("MMMM D,YYYY");

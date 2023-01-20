@@ -9,7 +9,12 @@ import org.apache.poi.ss.util.DateFormatConverter;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
-
+/**
+ *      @author Shiva Kumar
+ * 
+ *      Sling Model to fetch Header Primary Component properties
+ *
+ */
 @Model(adaptables = Resource.class)
 public class HeaderPrimaryModel {
 	@ValueMapValue
@@ -17,7 +22,9 @@ public class HeaderPrimaryModel {
 	@ValueMapValue
 	private String trendingDesc;
 	public String todayDate;
-
+	 /**
+     *      To get the date in specified date format
+     */
 	@PostConstruct
 	public void init() {
 		Date today = new Date();

@@ -14,7 +14,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.alchemy.capstone.core.services.TrendingArticalService;
-
+/**
+ *      @author Shiva Kumar
+ * 
+ *      Sling Model to fetch Trending Articles Component properties
+ *
+ */
 @Model(adaptables = { Resource.class,
 		SlingHttpServletRequest.class }, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 public class TrendingModel {
@@ -25,7 +30,10 @@ public class TrendingModel {
 
 	@OSGiService
 	TrendingArticalService trendingArticalService;
-
+	/**
+	 *     Post construct method to get the list of trending articles
+	 *     from TrendingArticleService
+	 */
 	@PostConstruct
 	public void init() {
 		Log.info("inside init 1");

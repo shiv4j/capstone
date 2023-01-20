@@ -1,5 +1,10 @@
 package com.alchemy.capstone.core.models;
-
+/**
+ *      @author Shiva Kumar
+ * 
+ *      Simple Class used for getter and setter methods
+ *
+ */
 public class YouTubeVideoResponse 
 {
 	private String html;
